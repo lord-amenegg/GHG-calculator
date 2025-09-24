@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900");
+
+head{
+  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "nationale","nationale-regular",Helvetica,sans-serif;
+  font-size: large;
+  background-color: #ebedef;
+  padding: 10;
+  margin: 10;
+
+}
+select{
+  width: 3000px;
+}
+select option {
+  width: 3000px;
+}
+body{
+
+    display: flex;
+    flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+    font-family: "nationale","nationale-regular",Helvetica,sans-serif;
+    font-size: medium;
+    
+
+  background-color: #ebedef;
+  background: #ebedef url("photo.png")
+ no-repeat fixed center;
+}
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 5px;
+  
+}
+.prueba {
+  background: rgba(242, 242, 242, 0.79);
+}
+.drugHistory{
+  width: 600px;
+  justify-content: space-evenly;
+} 
+.button {
+  background-color: #c7d56c;
+  border: none;
+  color: rgb(246, 236, 236);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.blur {
+  padding: 1rem;
+  width: 800px;
+  height: auto;
+  justify-content: start;
+  text-align: center;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.sex {
+  width: 20%;
+}
+.dob {
+  display:flex;
+  justify-content:space-evenly;
+  padding-left: 20%;
+  padding-right: 20%;
+  
+}
+.req {
+  text-align: left;
+}
+
+
+    input[type=text] {
+        width: 15%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=date], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+      }
+      input[type=submit] {
+  
+  
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #160606;
+        background-color: #2dc656;
+        border-radius: 6px;
+        outline: none;
+        transition: 0.3s;
+      }
+      .button:hover {
+        background-color: #c2c7c7;
+      }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: left;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+{% block title %}
+
+Iron Dose Calculator
+
+{% endblock %}
+
+
+{% block content %}
+
+  {% include "_nav.html" %}  
+
+<div>
+  <h2>Iron Dose Calculator v2.0</h2>
+</div>
+  
+  {% block message %}{% endblock %}
+  {% block error_message %}{% endblock %}
+  <style>
+    input {
+      width:50%;
+    }
+  </style>
+      <label for="weight">Weight (kg):</label>      
+      <input type="text" name="weight" id="weight" placeholder="{{ weight }}">
+      <br>
+      <label for="height">Height (cm):</label>
+      <input type="text" name="height" id="height" placeholder="{{ height}}">
+      <br>
+      <label for="Hb">Haemoglobin (g/dL):</label>
+      <input type="text" name="Hb" id="Hb" placeholder="{{ hb }}">
+      <br>
+      
+      <select name="sex", id="sex" class="sex"> 
+        <option hidden>Sex</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+        <br>
+        <button class="button" type="submit" id="calculateDose" onclick="parenteralIrondose()">Calculate Iron Dose</button>
+      <br>
+
+    <h1><p id="IBW">IBW: {{ ibw }}</p></h1>
+    <h1><p id="BMI">BMI:</p></h1>
+    <h1><p id="ironDose">Iron Dose: {{ iron_dose }}</p></h1>
+    <button class="button" onclick="CopyResultsToClipboard('ironDose')">Copy result</button>
+        
+
+{% endblock %} 

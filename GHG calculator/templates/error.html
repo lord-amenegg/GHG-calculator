@@ -1,0 +1,10 @@
+
+{% extends 'renal.html' %}
+{% block error_message %}
+<dialog open>
+    <p><h1>Missing and/or incorrect data {{ error_2 }}{{ error_3 }}</h1>
+    <form method="dialog">
+      <button>Start Over</button>
+    </form>
+  </dialog>
+{% endblock %}

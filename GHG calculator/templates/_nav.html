@@ -1,0 +1,9 @@
+<nav>
+    {% set menu_options = {'Iron Dose': 'iron_new', 'CO2 calculator': 'greenhouse_gas'} %}
+        {%for key, value in menu_options.items() %}
+    {% if request.endpoint != value %}
+    <a class= "button" href= "{{ url_for(value) }}">{{ key }}</a>&nbsp;
+    {% endif %}
+    {% endfor %}
+    <br> 
+    </nav> 

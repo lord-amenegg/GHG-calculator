@@ -1,0 +1,82 @@
+{% extends 'base.html' %} 
+{% block title %}
+
+Greenhouse Gas Calculator
+
+{% endblock %}
+
+
+{% block content %}
+
+  {% include "_nav.html" %}  
+
+<div>
+  <h2>Carbon footprint Calculator (CO2 eq)</h2>
+</div>
+  
+  {% block message %}{% endblock %}
+  {% block error_message %}{% endblock %}
+  <style>
+    input {
+      width:50%;
+    }
+  </style>
+      
+      <select name="calculation", onchange="CalculationChoice()", id="calculation" class="calculation"> 
+        <option hidden>calculation</option>
+        <option value="Single Use Eye Drops vs Preservative Free">Single Use Eye Drops vs Preservative Free</option>
+        <option value="Oral liquid vs tablet/capsule">Oral liquid vs tablet/capsule</option>
+        <option value="IV RTA bag vs tablet/capsule">IV RTA bag vs tablet/capsule</option>
+        <option value="IV vial vs tablet/capsule">IV vial bag vs tablet/capsule</option>
+        </select>
+        <br>
+        
+        <div id="eye drops" style="display: none;">
+          <label for="pack size">Pack size:</label>
+      <input type="text" name="pack_size" id="pack_size">
+      <br>
+          <label for="quantity">Quantity:</label>      
+      <input type="text" name="quantity" id="quantity">
+      <br>
+      
+      </div>
+
+
+      <div id="liquid vs PO" style="display: none;">
+        <label for="concentration">concentration (mg/5mL):</label>
+      <input type="text" name="concentration" id="concentration">
+       <br>
+        <label for="volume">Volume (mL):</label>
+      <input type="text" name="volume" id="volume">
+      <br>
+       <label for="quantity">Quantity:</label>      
+      <input type="text" name="quantityLiquid" id="quantityLiquid">
+      <br> 
+      </div>
+
+      <div id="IV" style="display: none;">
+         <label for="quantitative composititon">Quantitative composition (mg):</label>
+      <input type="text" name="quantitative composition" id="quantitative composition">
+      <br>
+       <label for="quantity">Quantity:</label>      
+      <input type="text" name="quantityIV" id="quantityIV">
+      <br>
+     
+      </div>
+
+      <br>
+        <button class="button" type="submit" id="calculateDose" onclick="CalculateCO2()">Calculate CO2</button>
+      <br>
+<div>
+    <h1><p id="CO2 1">CO2 option 1: </p></h1>
+    <h1><p id="CO2 2">CO2 option 2:</p></h1>
+    <h1><p id="CO2 saving">CO2 saving: {{ iron_dose }}</p></h1>
+    <button class="button" onclick="CopyResultsToClipboard('CO2 saving')">Copy result</button>
+</div>
+  
+{% include "_modal.html" %}  
+  
+
+
+ 
+{% endblock %} 

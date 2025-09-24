@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% block title %} 
+Pharmaceutical Calculators
+
+{% endblock %} 
+
+
+{% block content %}
+<head><h2>Welcome to your friendly pharmaceutical calculator</h2></head>
+
+    
+    
+<p><h2>What would you like to calculate?</h2></p>
+
+
+    
+        <a class="button" href="{{ url_for ('iron_new') }}">Parenteral Iron Dose</a>
+        <br>
+        <br>
+        <a class="button" href="{{ url_for ('renal_function') }}">Cockroft & Gault</a>
+        <br>
+        <br>
+        <a class="button" href="{{ url_for ('create_handover') }}">Handover</a>
+        <br>
+        <br>
+        <a class="button" href="{{ url_for ('drug_history_matic') }}">Drug History</a>
+        <br>
+        <br>
+        <a class="button" href="{{ url_for ('greenhouse_gas') }}">Green House Gas Calculator</a>
+        <br>
+
+    
+
+  
+  {% endblock %} 

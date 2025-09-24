@@ -1,0 +1,22 @@
+{% extends 'calculator.html' %}
+
+{% block message %}
+<dialog open>
+    <p><h2>Requirements:</h2></p>
+<div class=" req">
+    <ul><h3>
+        <li>Hb < 100</li>
+        <li>Ferritin < 30</li>
+        <li>Normal or low ferritin<br> with TSAT< 20%</h3>
+        </li>
+    </ul>
+</div>
+    
+    
+    <h3>Please ensure patient has not had a recent iron infusion<br>
+        A placeholder chart must be added to EPMA </h3>
+    <form method="dialog">
+      <button>Proceed</button>
+    </form>
+  </dialog>
+{% endblock %}
